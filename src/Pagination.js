@@ -42,6 +42,7 @@ const Pagination = () => {
 
   return (
     <div className={styles.container}>
+      <h1>Employee Data Table</h1>
       <table className={styles.table}>
         <thead>
           <tr>
