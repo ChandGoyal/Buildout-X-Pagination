@@ -1,0 +1,57 @@
+.container {
+  text-align: center;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid #04aa6d;
+  margin-bottom: 32px;
+}
+
+.headerCell,
+.dataCell {
+  border-bottom: 1px solid whitesmoke;
+  border-bottom-width: thin;
+  padding: 8px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.headerCell {
+  background-color: #04aa6d;
+  color: #f2f2f2;
+}
+
+.button {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:disabled {
+  background-color: #04aa6d;
+  cursor: not-allowed;
+  border-radius: 4px;
+}
+
+.pageNumber {
+  background-color: #04aa6d;
+  padding: 12px;
+  margin: 0 12px;
+  color: #f2f2f2;
+  font-weight: bold;
+  border-radius: 4px;
+}
