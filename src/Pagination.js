@@ -6,18 +6,20 @@ const Pagination = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [fetchError, setFetchError] = useState(false);
   const recordsPerPage = 10;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
+          "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/member.json"
         );
         setData(response.data);
         setTotalPages(Math.ceil(response.data.length / recordsPerPage));
       } catch (error) {
-        alert("failed to fetch data");
+        setFetchError(true);
+        alert("Failed to fetch data");
       }
     };
 
@@ -35,6 +37,10 @@ const Pagination = () => {
       setCurrentPage(currentPage - 1);
     }
   };
+
+  if (fetchError) {
+    return null; // Return nothing if there's a fetch error
+  }
 
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
