@@ -67,7 +67,7 @@ const Pagination = () => {
         <button
           className={styles.button}
           onClick={handlePrevClick}
-          disabled={currentPage === 1}
+          // disabled={currentPage === 1}
         >
           Previous
         </button>
@@ -75,7 +75,7 @@ const Pagination = () => {
         <button
           className={styles.button}
           onClick={handleNextClick}
-          disabled={currentPage === totalPages}
+          // disabled={currentPage === totalPages}
         >
           Next
         </button>
